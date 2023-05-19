@@ -1,7 +1,7 @@
 {
   "name": "HAOS Starline",
   "country": ["RU"],
-  "version": "0.0.3b",
+  "version": "0.0.5b",
   "render_readme": true,
   "content_in_root": true
 }
