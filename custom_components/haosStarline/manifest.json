@@ -1,7 +1,7 @@
 {
   "domain": "haosStarline",
   "name": "haosStarLine",
-  "version": "0.0.1b",
+  "version": "0.0.2b",
   "codeowners": ["@anonym-tsk", "@sgilyin"],
   "config_flow": true,
   "documentation": "https://www.home-assistant.io/integrations/starline",
