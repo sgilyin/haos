@@ -1,12 +1,12 @@
 {
   "domain": "haosstarline",
   "name": "HAOS StarLine",
-  "version": "0.0.3b",
+  "version": "0.0.4b",
   "codeowners": ["@anonym-tsk", "@sgilyin"],
   "config_flow": true,
   "documentation": "https://www.home-assistant.io/integrations/starline",
   "iot_class": "cloud_polling",
-  "loggers": ["haosStarline"],
+  "loggers": ["haosstarline"],
   "requirements": ["starline==0.1.5"],
-  "issue_tracker": "https://github.com/sgilyin/haosStarline/issues"
+  "issue_tracker": "https://github.com/sgilyin/haosstarline/issues"
 }
