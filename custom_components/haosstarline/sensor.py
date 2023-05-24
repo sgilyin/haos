@@ -97,6 +97,7 @@ async def async_setup_entry(
 ) -> None:
     """Set up the StarLine sensors."""
     account: StarlineAccount = hass.data[DOMAIN][entry.entry_id]
+    _LOGGER.error(StarlineAccount.__dict__)
     entities = [
         sensor
         for device in account.api.devices.values()
