@@ -155,7 +155,8 @@ class StarlineSensor(StarlineEntity, SensorEntity):
             return self._device.mileage.get("val")
         if self._key == "can_version":
             _LOGGER.error(self._device)
-            return self._device.diag.get("can_version")
+            _LOGGER.debug(self._device)
+            # return self._device.diag.get("can_version")
         return None
 
     @property
