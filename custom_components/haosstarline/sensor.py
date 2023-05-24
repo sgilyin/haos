@@ -153,6 +153,8 @@ class StarlineSensor(StarlineEntity, SensorEntity):
             return self._device.errors.get("val")
         if self._key == "mileage" and self._device.mileage:
             return self._device.mileage.get("val")
+        if self._key == "can_version":
+            return self._device.diag.get("can_version")
         return None
 
     @property
