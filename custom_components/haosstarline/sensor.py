@@ -85,6 +85,10 @@ SENSOR_TYPES: tuple[StarlineSensorEntityDescription, ...] = (
         device_class=SensorDeviceClass.DISTANCE,
         icon="mdi:counter",
     ),
+    StarlineSensorEntityDescription(
+        key="can_version",
+        name_="CAN Version",
+    ),
 )
 
 
