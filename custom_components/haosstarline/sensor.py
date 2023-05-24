@@ -21,7 +21,7 @@ from homeassistant.helpers.entity_platform import AddEntitiesCallback
 from homeassistant.helpers.icon import icon_for_battery_level, icon_for_signal_level
 
 from .account import StarlineAccount, StarlineDevice
-from .const import DOMAIN
+from .const import DOMAIN, _LOGGER
 from .entity import StarlineEntity
 
 
@@ -154,6 +154,7 @@ class StarlineSensor(StarlineEntity, SensorEntity):
         if self._key == "mileage" and self._device.mileage:
             return self._device.mileage.get("val")
         if self._key == "can_version":
+            _LOGGER.debug(self._device)
             return self._device.diag.get("can_version")
         return None
 
