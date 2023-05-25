@@ -180,4 +180,4 @@ class StarlineAccount:
     @staticmethod
     def diag_attrs(device: StarlineDevice) -> dict[str, Any]:
         """Attributes for can_version sensor."""
-        return {"can_version": device.diag.get("can_version")}
+        return {"can_version": device.diag.can_version}
