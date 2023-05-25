@@ -129,7 +129,6 @@ class StarlineAccount:
     @staticmethod
     def device_info(device: StarlineDevice) -> DeviceInfo:
         """Device information for entities."""
-        _LOGGER.error(device.__dict__)
         return DeviceInfo(
             identifiers={(DOMAIN, device.device_id)},
             manufacturer="StarLine",
@@ -177,8 +176,3 @@ class StarlineAccount:
     def errors_attrs(device: StarlineDevice) -> dict[str, Any]:
         """Attributes for errors sensor."""
         return {"errors": device.errors.get("errors")}
-
-    @staticmethod
-    def diag_attrs(device: StarlineDevice) -> dict[str, Any]:
-        """Attributes for can_version sensor."""
-        return {"can_version": device.diag.can_version}

@@ -97,6 +97,7 @@ async def async_setup_entry(
 ) -> None:
     """Set up the StarLine sensors."""
     account: StarlineAccount = hass.data[DOMAIN][entry.entry_id]
+    _LOGGER.error(account.__dict__)
     entities = [
         sensor
         for device in account.api.devices.values()
@@ -153,9 +154,6 @@ class StarlineSensor(StarlineEntity, SensorEntity):
             return self._device.errors.get("val")
         if self._key == "mileage" and self._device.mileage:
             return self._device.mileage.get("val")
-        if self._key == "can_version":
-            _LOGGER.error(str(self._account.diag_attrs(self._device).__dict__))
-            # return self._device.diag.get("can_version")
         return None
 
     @property
