@@ -129,6 +129,7 @@ class StarlineAccount:
     @staticmethod
     def device_info(device: StarlineDevice) -> DeviceInfo:
         """Device information for entities."""
+        _LOGGER.error(device.__dict__)
         return DeviceInfo(
             identifiers={(DOMAIN, device.device_id)},
             manufacturer="StarLine",
